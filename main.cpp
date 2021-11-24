@@ -38,6 +38,16 @@ int main() {
     mli.insert(pair<string, list<int>>("Mario", templ));
     mli.insert(pair<string, list<int>>("Lucia", {1, 2, 3}));
 
-    
+    mli["Lucia"].push_back(0);
+    mli["Tizio"].push_back(9);
+    mli["Caio"] = {};
+
+    for(const auto& item : mli){
+        cout << "Nome: " << item.first << "\t Valori: ";
+        for(const auto& value : item.second){
+            cout << "[" << value << "]";
+        }
+        cout << endl;
+    }
 
 } 
