@@ -8,7 +8,7 @@ int main() {
 
     mi.insert(pair<int,string>(7, string("Giovanni")));
     mi.insert(pair<int,string>(1, string("Luca")));
-    
+
     //se c'è non fa nulla
     mi.insert(pair<int,string>(7, string("Boh")));
     //se c'è sovrascrive
@@ -21,4 +21,9 @@ int main() {
         cout << iter->first << " " << iter->second << endl;
     }
 
+    if(mi.count(7)) cout << "Esiste " << mi[7] << endl;
+
+    for (auto& item : mi){
+        cout << item.first << " " << item.second << endl;
+    }
 } 
