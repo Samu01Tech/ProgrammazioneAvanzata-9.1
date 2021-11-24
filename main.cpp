@@ -1,9 +1,11 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <list>
 using namespace std;
 
 int main() {
+    /*
     map<int, string> mi;
 
     mi.insert(pair<int,string>(7, string("Giovanni")));
@@ -26,4 +28,16 @@ int main() {
     for (auto& item : mi){
         cout << item.first << " " << item.second << endl;
     }
+    */
+    list<int> templ;
+    templ.push_front(1);
+    templ.push_front(6);
+    templ.push_front(3);
+
+    map<string, list<int>> mli;
+    mli.insert(pair<string, list<int>>("Mario", templ));
+    mli.insert(pair<string, list<int>>("Lucia", {1, 2, 3}));
+
+    
+
 } 
